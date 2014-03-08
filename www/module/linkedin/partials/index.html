@@ -1,0 +1,34 @@
+<div class="module module-linkedin">
+
+	<div class="row">
+		<div class="col-xs-12 block block-title ">Connect to linkedin</div>
+	</div>
+	
+	<div class="row" ng-hide="item">
+		<div class="col-xs-12 block block-white block-text">
+			<a class="btn btn-primary btn-lg btn-block" ng-click="linkedin()">
+				<span class="glyphicon glyphicon-lock"></span> Connect to linkedin
+			</a>
+		</div>
+	</div>
+	
+	<div class="row row-large" ng-show="item" >
+		<div class="col-xs-6 col-ys-4 col-sm-3 col-md-2 block block-image">
+			<img ng-show="item.pictureUrl" class="menu-picture photo-block" ng-src="{{item.pictureUrl}}" />
+			<img ng-hide="item.pictureUrl" class="menu-picture photo-block" src="http://www.familieslager.nl/capathon/lion2.jpg" />
+		</div>
+		<div class="col-xs-6 col-ys-8 col-sm-9 col-md-10 block block-color1">
+			<h3>{{item.headline}}</h3>
+		</div>
+		
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 block" style="margin:0px;padding: 0px;">
+			<ul class="list-group" style="margin:0px;padding: 0px;">
+				<li class="list-group-item" ng-repeat="skill in item.skills">{{skill}}</li>
+			</ul>
+		</div>
+	</div>
+
+</div>

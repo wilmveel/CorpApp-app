@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Capture Photo</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: 7714w3q3mqlrro
+  onLoad: onLinkedInLoad
+  authorize: true
+</script>
+
+<script type="text/javascript" >
+function onLinkedInLoad() {
+     IN.Event.on(IN, "auth", onLinkedInAuth);
+}
+</script>
+  </head>
+  <body>
+    tets
+	
+	<script type="IN/Login"></script>
+	<button onclick="onLinkedInLoad()">Klik</button>
+  </body>
+</html>
