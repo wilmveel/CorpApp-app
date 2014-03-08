@@ -2,8 +2,8 @@ var corpApp = angular.module('corpApp', ['ngRoute', 'corpApp.PeopleFinder', 'cor
 
 /** Constantes */
 corpApp.constant('config',{
-	'API_URL' : 'https://corpapp.herokuapp.com',
-	//'API_URL' : 'http://localhost:8080/corpapi'
+	//'API_URL' : 'https://corpapp.herokuapp.com',
+	'API_URL' : 'http://localhost:8080/corpapi'
 });
 
 /** Routing for the main app */
