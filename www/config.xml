@@ -52,4 +52,5 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser" />
 	
     <access origin="https://corpapp.herokuapp.com/*" />
+    <access origin="http://m.c.lnkd.licdn.com/*" />
 </widget>
