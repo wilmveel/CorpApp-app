@@ -52,6 +52,7 @@
 	<gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
 	
+    <access origin="http://corpapp.herokuapp.com/*" />
     <access origin="https://corpapp.herokuapp.com/*" />
     <access origin="http://m.c.lnkd.licdn.com/*" />
 </widget>
