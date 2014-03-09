@@ -93,6 +93,7 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 		return this.getUser().then(function(response) {
 			corpKey = response.data.username.toUpperCase();
 			userName = response.data.username;
+			email = response.data.email;
 			return response;
 		},function(response) {
 			$log.debug("Cannot validate!");
