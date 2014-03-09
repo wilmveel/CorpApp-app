@@ -26,8 +26,11 @@ corpApp.config(['$httpProvider', function($httpProvider) {
     }
 ]);
 
-corpApp.controller('HomeController', function($scope, $http, $location, $timeout, config) {
-		
+corpApp.controller('HomeController', function($scope, $http, $location, $timeout, config, authorizeService) {
+	
+  // Reload User Data
+  authorizeService.validateToken();
+
 	$scope.color = function(i){
 	
 		color = {
