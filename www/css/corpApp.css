@@ -179,6 +179,10 @@ body {
 	
 }
 
+.menu a.icon.modules, .menu a.icon.modules:visited{
+    color: #fff;
+}
+
 .menu .block {
 	height:150px;
 }
