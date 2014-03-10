@@ -179,8 +179,10 @@ body {
 	
 }
 
-.menu a.icon.modules, .menu a.icon.modules:visited{
+.menu a.icon.modules, .menu a.icon.modules:visited, .menu a.icon.modules:hover{
     color: #fff;
+    text-align: center;
+    text-decoration: none;
 }
 
 .menu .block {
