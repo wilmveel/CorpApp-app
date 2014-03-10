@@ -1,0 +1,11 @@
+<div class="module escape">
+	<div class="row">
+		<div class="col-xs-12 block block-title block-title-escape">Escape events</div>
+	</div>
+	
+	<div class="row" ng-repeat="event in events">
+		<div class="col-xs-6 col-ys-4 col-sm-3 col-md-2 block block-white image-container"><img src="{{event.img}}" /></div>
+		<div class="col-xs-6 col-ys-8 col-sm-9 col-md-10 block block-color0"><div class="text"><a href="" ng-click="goEvent(event.eventnummer)">{{event.name}}</a></div> </div>
+	</div>
+	</table>
+</div>

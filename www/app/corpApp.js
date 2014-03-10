@@ -1,4 +1,4 @@
-var corpApp = angular.module('corpApp', ['ngRoute', 'corpApp.PeopleFinder', 'corpApp.departments', 'corpApp.presentation', 'corpApp.profile', 'corpApp.expenses', 'corpApp.coach', 'corpApp.carpool', 'corpApp.linkedin', 'corpApp.authorize', 'corpApp.test']);
+var corpApp = angular.module('corpApp', ['ngRoute', 'corpApp.PeopleFinder', 'corpApp.departments', 'corpApp.presentation', 'corpApp.profile', 'corpApp.expenses', 'corpApp.coach', 'corpApp.carpool', 'corpApp.linkedin', 'corpApp.authorize', 'corpApp.test', 'corpApp.escape']);
 
 /** Constantes */
 corpApp.constant('config',{
@@ -58,6 +58,7 @@ corpApp.controller('HomeController', function($scope, $http, $location, $timeout
     "carpool", 
     "linkedin", 
     "authorize", 
+	"escape",
     "test"
   ];
 
