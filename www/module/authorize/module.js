@@ -127,7 +127,13 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 	
 	var clientId = "corpapp";
 	var secret = "secret";
-	var redirectUrl = $location.absUrl();
+
+	if($location.absUrl().match(/file:/)){
+		var redirectUrl = "http://localhost";
+	}else{
+		var redirectUrl = $location.absUrl();
+	}
+	
 	
 	
 	$scope.accessToken = authorizeService.getToken();
