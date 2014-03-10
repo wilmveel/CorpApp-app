@@ -91,7 +91,7 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	this.validateToken = function(){
 		$log.debug("validateToken");
 		return this.getUser().then(function(response) {
-			//corpKey = response.data.username.toUpperCase();
+			corpKey = response.data.username.toUpperCase();
 			userName = response.data.username;
 			email = response.data.email;
 			return response;
