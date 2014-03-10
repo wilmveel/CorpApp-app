@@ -91,7 +91,7 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	this.validateToken = function(){
 		$log.debug("validateToken");
 		return this.getUser().then(function(response) {
-			corpKey = response.data.username.toUpperCase();
+			//corpKey = response.data.username.toUpperCase();
 			userName = response.data.username;
 			email = response.data.email;
 			return response;
@@ -127,7 +127,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 	
 	var clientId = "corpapp";
 	var secret = "secret";
-	var redirectUrl = "http://localhost/corpapp/#/module/authorize";
+	var redirectUrl = $location.absUrl();
 	
 	
 	$scope.accessToken = authorizeService.getToken();
