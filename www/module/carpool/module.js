@@ -38,7 +38,7 @@ carpoolModule.controller('CarpoolController', function($scope, $http, $filter, c
 
 
 	$scope.searchRide = function(){
-		$http.get(config.API_URL + '/serviceCarpool').
+		$http.get('/module/carpool/stubs/carpool.json').
 		success(function(data, status, headers, config) {
 			$scope.list = data;
 			$scope.list = $filter('carpoolFilter')($scope.list, {from : $scope.fromLocation, to : $scope.toLocation});

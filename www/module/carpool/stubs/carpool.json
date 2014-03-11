@@ -1,0 +1,44 @@
+[
+    {
+        "_id":{
+            "$id":"53181e9fc03ce7353d7892a4"
+        },
+        "_class":"nl.capgemini.corpapp.documents.Carpool",
+        "corpkey":"WVEELENT",
+        "from":"Amsterdam",
+        "to":"Utrecht",
+        "date":{
+            "sec":1394089631,
+            "usec":193000
+        }
+    },
+    {
+        "_id":{
+            "$id":"53181e9fc03ce7353d7892a5"
+        },
+        "_class":"nl.capgemini.corpapp.documents.Carpool",
+        "corpkey":"BALTENA",
+        "from":"Gouda",
+        "to":"Den Haag",
+        "date":{
+            "sec":1394089631,
+            "usec":424000
+        }
+    },
+    {
+        "_id":{
+            "$id":"5318e1fc095e0d741d000031"
+        },
+        "from":"Amsterdam",
+        "to":"Utrecht",
+        "corpkey":"BALTENA"
+    },
+    {
+        "_id":{
+            "$id":"5318e1fc095e0d741d000032"
+        },
+        "from":"Den Haag",
+        "to":"Gouda",
+        "corpkey":"BALTENA"
+    }
+]
