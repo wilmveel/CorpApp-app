@@ -1,4 +1,6 @@
-	var authorizeModule = angular.module('corpApp.authorize', ['ngRoute']);
+var authorizeModule = angular.module('corpApp.authorize', ['ngRoute']);
+
+var loc;
 
 //routing
 authorizeModule.config(['$routeProvider',
@@ -7,6 +9,10 @@ authorizeModule.config(['$routeProvider',
 		when('/module/authorize', {
 			templateUrl: 'module/authorize/login.html',
 			controller: 'authorizeController'
+		}).
+		when('/module/authorize/logout', {
+			templateUrl: 'module/authorize/login.html',
+			controller: 'logoutController'
 		})
 	}
 ]);
@@ -68,6 +74,7 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	}
 	
 	this.getToken = function(){
+		$log.debug("getToken");
 		return accessToken;
 	}
 	
@@ -78,6 +85,9 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	
 	this.removeToken = function(){
 		localStorage.removeItem("access_token");
+		corpKey = null;
+		userName = null;
+		accessToken = null;
 	}
 
 	this.getUserName = function(){
@@ -91,6 +101,7 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	this.validateToken = function(){
 		$log.debug("validateToken");
 		return this.getUser().then(function(response) {
+
 			corpKey = response.data.username.toUpperCase();
 			userName = response.data.username;
 			email = response.data.email;
@@ -111,38 +122,46 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	
 	this.getUser = function(){
 		return $http.get(config.API_URL + '/rest/token').
-		then(function(response) {
+		success(function(response) {
 			$log.debug("getUser", response);
 			return response;
-		},function(response){
+		}).error(function(response){
 			$log.error("Not able to get token");
 			return response;
 		});
 	}
 });
 
+authorizeModule.controller('logoutController', function($log, $location, authorizeService) {
+	$log.debug("Logout");
+	authorizeService.removeToken();
+	$location.path("/");
+});
+
 authorizeModule.controller('authorizeController', function($scope, $http, $log, $location, authorizeService, config) {
 	
+	$log.debug("authorizeController");
+
+	$scope.accessToken = authorizeService.getToken();
+	$scope.corpKey = authorizeService.getCorpKey();
+	$scope.userName = authorizeService.getUserName();
+	$scope.authorized = authorizeService.hasToken();
+
 	var windowRef;
 	
 	var clientId = "corpapp";
 	var secret = "secret";
-	var redirectUrl = $location.absUrl();
-	
-	
-	$scope.accessToken = authorizeService.getToken();
-	$scope.corpKey = authorizeService.getCorpKey();
-	$scope.userName = authorizeService.getUserName();	
- 
-	
-	$scope.authorized = function(){
-		return authorizeService.hasToken();
+
+	if($location.absUrl().match(/file:/)){
+		var redirectUrl = "http://localhost";
+	}else{
+		var redirectUrl = $location.absUrl();
 	}
-	
+
 	$scope.setToken = function(){
 		$log.debug("Set token: ", $scope.token);
 		localStorage.setItem("access_token", $scope.token);
-		$location.path("/home");
+		$location.path("/");
 	}
 	
 	// Open popup to connect to capgemini
@@ -152,6 +171,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 		url += "&redirect_uri=" + redirectUrl;
 		windowRef = window.open(url, '_blank', 'location=no');
 		windowRef.addEventListener('loadstop', loadstop);
+		loc = $location;
 	}
 	
 	
@@ -170,6 +190,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 var code = url.match(/code=([^\&]+)/)
                 if (code) code = code[1];
                 $log.log("Request with code: " + code);
+                loc.path("/");
                 windowRef.close();
             }else if (/access_token=/.test(url)){
                 //login unsuccessful
@@ -177,6 +198,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 if (access_token) access_token = access_token[1];
 				$log.log("Set access_token" + access_token);
 				localStorage.setItem("access_token", access_token);
+				loc.path("/");
                 windowRef.close();
             }else if (/error_description=/.test(url)){
                 //login unsuccessful
