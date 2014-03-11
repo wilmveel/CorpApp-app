@@ -1,44 +1,92 @@
 [
     {
-        "_id":{
-            "$id":"53181e9fc03ce7353d7892a4"
+        "_id": {
+            "$id": "53181e9fc03ce7353d7892a4"
         },
-        "_class":"nl.capgemini.corpapp.documents.Carpool",
-        "corpkey":"WVEELENT",
-        "from":"Amsterdam",
-        "to":"Utrecht",
-        "date":{
-            "sec":1394089631,
-            "usec":193000
+        "_class": "nl.capgemini.corpapp.documents.Carpool",
+        "corpkey": "WVEELENT",
+        "from": {
+            "formatted_address": "Reykjavikplein 1, Utrecht, Netherlands",
+            "geometry": {
+                "location": {
+                    "d": 52.100135,
+                    "e": 5.064350999999988
+                }
+            }
+        },
+        "to": {
+            "formatted_address": "Hoogoorddreef 15, Amsterdam Zuidoost, Nederland",
+            "geometry": {
+                "location": {
+                    "d": 52.308226,
+                    "e": 4.944984999999974
+                }
+            }
+        },
+        "date": {
+            "sec": 1394089631,
+            "usec": 193000
         }
     },
     {
-        "_id":{
-            "$id":"53181e9fc03ce7353d7892a5"
+        "_id": {
+            "$id": "53181e9fc03ce7353d7892a5"
         },
-        "_class":"nl.capgemini.corpapp.documents.Carpool",
-        "corpkey":"BALTENA",
-        "from":"Gouda",
-        "to":"Den Haag",
-        "date":{
-            "sec":1394089631,
-            "usec":424000
+        "_class": "nl.capgemini.corpapp.documents.Carpool",
+        "corpkey": "BALTENA",
+        "from": {
+            "formatted_address": "Haarlemmerweg, 1055 Amsterdam, Nederland",
+            "geometry": {
+                "location": {
+                    "k": 52.3848374,
+                    "A": 4.851391799999988
+                }
+            }
+        },
+        "to": {
+            "formatted_address": "Reykjavikplein 1, Utrecht, Netherlands",
+            "geometry": {
+                "location": {
+                    "d": 52.100135,
+                    "e": 5.064350999999988
+                }
+            }
+        },
+        "date": {
+            "sec": 1394089631,
+            "usec": 424000
         }
     },
     {
-        "_id":{
-            "$id":"5318e1fc095e0d741d000031"
+        "_id": {
+            "$id": "5318e1fc095e0d741d000031"
         },
-        "from":"Amsterdam",
-        "to":"Utrecht",
-        "corpkey":"BALTENA"
+        "from": "Amsterdam",
+        "to": "Utrecht",
+        "corpkey": "BALTENA"
     },
     {
-        "_id":{
-            "$id":"5318e1fc095e0d741d000032"
+        "_id": {
+            "$id": "5318e1fc095e0d741d000032"
         },
-        "from":"Den Haag",
-        "to":"Gouda",
-        "corpkey":"BALTENA"
+        "from": {
+            "formatted_address": "Den Haag, Nederland",
+            "geometry": {
+                "location": {
+                    "k": 52.0704978,
+                    "A": 4.3006999000000405
+                }
+            }
+        },
+        "to": {
+            "formatted_address": "Gouda, Nederland",
+            "geometry": {
+                "location": {
+                    "k": 52.0115205,
+                    "A": 4.710463300000015
+                }
+            }
+        },
+        "corpkey": "BALTENA"
     }
 ]

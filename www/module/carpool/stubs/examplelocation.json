@@ -1,0 +1,250 @@
+[
+    {
+        "address_components": [
+            {
+                "long_name": "1",
+                "short_name": "1",
+                "types": ["street_number"]
+            },
+            {
+                "long_name": "Reykjavikplein",
+                "short_name": "Reykjavikplein",
+                "types": ["route"]
+            },
+            {
+                "long_name": "Hogeweide",
+                "short_name": "Hogeweide",
+                "types": ["sublocality", "political"]
+            },
+            {
+                "long_name": "West",
+                "short_name": "West",
+                "types": ["sublocality", "political"]
+            },
+            {
+                "long_name": "Utrecht",
+                "short_name": "Utrecht",
+                "types": ["locality", "political"]
+            },
+            {
+                "long_name": "Utrecht",
+                "short_name": "Utrecht",
+                "types": ["administrative_area_level_2", "political"]
+            },
+            {
+                "long_name": "UT",
+                "short_name": "UT",
+                "types": ["administrative_area_level_1", "political"]
+            },
+            {
+                "long_name": "Nederland",
+                "short_name": "NL",
+                "types": ["country", "political"]
+            },
+            {
+                "long_name": "3543 KA",
+                "short_name": "3543 KA",
+                "types": ["postal_code"]
+            }
+        ],
+        "adr_address": "<span class=\"street-address\">Reykjavikplein 1</span>, <span class=\"postal-code\">3543 KA</span> <span class=\"locality\">Utrecht</span>, <span class=\"country-name\">Nederland</span>",
+        "formatted_address": "Reykjavikplein 1, Utrecht, Netherlands",
+        "formatted_phone_number": "030 689 0000",
+        "geometry": {
+            "location": {
+                "d": 52.100135,
+                "e": 5.064350999999988
+            }
+        },
+        "icon": "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "7dd58d164a170abfa78d8070630625fd9fa087d9",
+        "international_phone_number": "+31 30 689 0000",
+        "name": "Capgemini Nederland B.V.",
+        "opening_hours": {
+            "open_now": false,
+            "periods": [
+                {
+                    "close": {
+                        "day": 1,
+                        "time": "1700",
+                        "hours": 17,
+                        "minutes": 0,
+                        "nextDate": 1395072000000
+                    },
+                    "open": {
+                        "day": 1,
+                        "time": "0830",
+                        "hours": 8,
+                        "minutes": 30,
+                        "nextDate": 1395041400000
+                    }
+                },
+                {
+                    "close": {
+                        "day": 2,
+                        "time": "1700",
+                        "hours": 17,
+                        "minutes": 0,
+                        "nextDate": 1395158400000
+                    },
+                    "open": {
+                        "day": 2,
+                        "time": "0830",
+                        "hours": 8,
+                        "minutes": 30,
+                        "nextDate": 1395127800000
+                    }
+                },
+                {
+                    "close": {
+                        "day": 3,
+                        "time": "1700",
+                        "hours": 17,
+                        "minutes": 0,
+                        "nextDate": 1394640000000
+                    },
+                    "open": {
+                        "day": 3,
+                        "time": "0830",
+                        "hours": 8,
+                        "minutes": 30,
+                        "nextDate": 1394609400000
+                    }
+                },
+                {
+                    "close": {
+                        "day": 4,
+                        "time": "1700",
+                        "hours": 17,
+                        "minutes": 0,
+                        "nextDate": 1394726400000
+                    },
+                    "open": {
+                        "day": 4,
+                        "time": "0830",
+                        "hours": 8,
+                        "minutes": 30,
+                        "nextDate": 1394695800000
+                    }
+                },
+                {
+                    "close": {
+                        "day": 5,
+                        "time": "1700",
+                        "hours": 17,
+                        "minutes": 0,
+                        "nextDate": 1394812800000
+                    },
+                    "open": {
+                        "day": 5,
+                        "time": "0830",
+                        "hours": 8,
+                        "minutes": 30,
+                        "nextDate": 1394782200000
+                    }
+                }
+            ]
+        },
+        "photos": [
+            {
+                "height": 190,
+                "html_attributions": [],
+                "width": 307
+            }
+        ],
+        "reference": "CoQBcgAAAOIxd4bbma3s_IjGWjwk-afrwmDt9jsD1gTIdX83VMEaEGP4u9UCA42YigDOFkBFsJUtrMY_3xymeoJPnGze_9sg9xLniB9wzLODVExIZlc3gSJMKUHCdPvLI6ZX7ob_YhoMSrP7Lg4KgnSm2nS7ksX6c1HFAxYDb2t1dlPSJqJKEhBW807GLN91jDZdTS-K6ysZGhQutyy3tjLJDE9d_NzsffBZSE8tlg",
+        "reviews": [
+            {
+                "aspects": [
+                    {
+                        "rating": 3,
+                        "type": "overall"
+                    }
+                ],
+                "author_name": "Bart Vink",
+                "author_url": "https://plus.google.com/113178189619890619868",
+                "language": "nl",
+                "rating": 5,
+                "text": "Leuk om ook weer eens in dit gebouw te zijn. Cap laat zien zich goed aan te passen aan de eisen van de markt en tijd. Mooi en bescheiden ingericht. Ze zijn zuinig op hun mensen en dat zie je in alles.",
+                "time": 1380528674
+            }
+        ],
+        "types": ["establishment"],
+        "url": "https://plus.google.com/107439216541688901224/about?hl=nl-NL",
+        "user_ratings_total": 1,
+        "utc_offset": 60,
+        "vicinity": "Reykjavikplein 1, Utrecht",
+        "website": "http://www.capgemini.nl/",
+        "html_attributions": [],
+        "tz": "GMT+0100"
+    },
+    {
+        "address_components": [
+            {
+                "long_name": "15",
+                "short_name": "15",
+                "types": ["street_number"]
+            },
+            {
+                "long_name": "Hoogoorddreef",
+                "short_name": "Hoogoorddreef",
+                "types": ["route"]
+            },
+            {
+                "long_name": "Amstel III en Bullewijk",
+                "short_name": "Amstel III en Bullewijk",
+                "types": ["sublocality", "political"]
+            },
+            {
+                "long_name": "Zuidoost",
+                "short_name": "Zuidoost",
+                "types": ["sublocality", "political"]
+            },
+            {
+                "long_name": "Amsterdam Zuidoost",
+                "short_name": "Amsterdam Zuidoost",
+                "types": ["locality", "political"]
+            },
+            {
+                "long_name": "Amsterdam",
+                "short_name": "Amsterdam",
+                "types": ["administrative_area_level_2", "political"]
+            },
+            {
+                "long_name": "NH",
+                "short_name": "NH",
+                "types": ["administrative_area_level_1", "political"]
+            },
+            {
+                "long_name": "Nederland",
+                "short_name": "NL",
+                "types": ["country", "political"]
+            },
+            {
+                "long_name": "1101 BA",
+                "short_name": "1101 BA",
+                "types": ["postal_code"]
+            }
+        ],
+        "adr_address": "<span class=\"street-address\">Hoogoorddreef 15</span>, <span class=\"postal-code\">1101 BA</span> <span class=\"locality\">Amsterdam Zuidoost</span>, <span class=\"country-name\">Nederland</span>",
+        "formatted_address": "Hoogoorddreef 15, Amsterdam Zuidoost, Nederland",
+        "formatted_phone_number": "030 689 0000",
+        "geometry": {
+            "location": {
+                "d": 52.308226,
+                "e": 4.944984999999974
+            }
+        },
+        "icon": "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+        "id": "d0110611a72419b443e28ac07ebcada991c787f3",
+        "international_phone_number": "+31 30 689 0000",
+        "name": "Capgemini Nederland B.V.",
+        "reference": "CoQBcQAAAOz-TnOPHDn9bQRo3iQEU8XzWGSfYyU5NHU-xBZwrJ1dlWR5M86QnDzSasoRk0eS6qOjiucy665mLmO4lyI85o_sZfVQssM0oRyTpqv1A5HnKq-MkLt0r2tqGdSsWMCRC2KzweUKM71znnO4wxvZ5a42-xjthTXkXp7DBAyAGhPuEhDGQKE-f9jdTmkPaxP8JvYPGhS9Qnnm81GWhnJvnXWqhoWcWB-HKA",
+        "types": ["establishment"],
+        "url": "https://plus.google.com/109012624713080184636/about?hl=nl-NL",
+        "utc_offset": 60,
+        "vicinity": "Hoogoorddreef 15, Amsterdam Zuidoost",
+        "html_attributions": [],
+        "tz": "GMT+0100"
+    }
+]
