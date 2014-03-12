@@ -1,4 +1,4 @@
-var corpApp = angular.module('corpApp', ['ngRoute', 'corpApp.PeopleFinder', 'corpApp.departments', 'corpApp.presentation', 'corpApp.profile', 'corpApp.expenses', 'corpApp.coach', 'corpApp.carpool', 'corpApp.linkedin','ngAutocomplete']);
+var corpApp = angular.module('corpApp', ['ui.bootstrap','ngRoute', 'corpApp.PeopleFinder', 'corpApp.departments', 'corpApp.presentation', 'corpApp.profile', 'corpApp.expenses', 'corpApp.coach', 'corpApp.carpool', 'corpApp.linkedin','ngAutocomplete']);
 
 corpApp.constant('config',{
 	'API_URL' : 'http://turfje.nl/corpapp',
