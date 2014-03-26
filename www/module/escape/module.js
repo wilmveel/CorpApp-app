@@ -20,6 +20,10 @@ escapeModule.controller('IndexController', function($scope, $http, $log, $locati
 		$log.debug("data escape", data);
 		$scope.events = data;
 	});
+
+	$scope.test = function() {
+		$log.debug("Test2");
+	}
 	
 	$scope.goEvent = function(eventnummer){ 
 		EventService.eventnummer = eventnummer;

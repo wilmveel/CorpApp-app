@@ -1,7 +1,5 @@
 var authorizeModule = angular.module('corpApp.authorize', ['ngRoute']);
 
-var loc;
-
 //routing
 authorizeModule.config(['$routeProvider',
 	function($routeProvider) {
@@ -171,7 +169,6 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 		url += "&redirect_uri=" + redirectUrl;
 		windowRef = window.open(url, '_blank', 'location=no');
 		windowRef.addEventListener('loadstop', loadstop);
-		loc = $location;
 	}
 	
 	
@@ -190,7 +187,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 var code = url.match(/code=([^\&]+)/)
                 if (code) code = code[1];
                 $log.log("Request with code: " + code);
-                loc.path("/");
+                $location.path("/");
                 windowRef.close();
             }else if (/access_token=/.test(url)){
                 //login unsuccessful
@@ -198,7 +195,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 if (access_token) access_token = access_token[1];
 				$log.log("Set access_token" + access_token);
 				localStorage.setItem("access_token", access_token);
-				loc.path("/");
+				$location.path("/");
                 windowRef.close();
             }else if (/error_description=/.test(url)){
                 //login unsuccessful
