@@ -1,0 +1,31 @@
+<style>
+    .pac-container {
+        z-index: 9999;
+    }
+</style>
+<div class="row">
+    <div class="col-xs-12 block block-title block-title-carpool">Carpool</div>
+</div>
+<div class="row">
+    <div class="block block-form search">
+        <form role="form">
+            <div class="form-group">
+                <div class="form-group">
+                    <input type="label" class="form-control input-lg" ng-autocomplete placeholder="From location" ng-model="fromLocation" options="options" details="details" autofocus="autofocus" />
+                    <input type="label" class="form-control input-lg" ng-autocomplete placeholder="To location" ng-model="toLocation" options="options1" details="details1" autofocus="autofocus" />
+                </div>
+                <div class="form-group">
+                <button type="button" class="btn btn-lg btn-block" ng-click="submitRide()"><b>submit ride</b>
+                </button>
+                </div>
+            </div>
+            <!--<div class="alert alert-success">Sorry could not find.</div>-->
+        </form>
+    </div>
+</div>
+<div class="row">
+    From: {{details.formatted_address}}
+</div>
+<div class="row">
+    To: {{details1.formatted_address}}
+</div>

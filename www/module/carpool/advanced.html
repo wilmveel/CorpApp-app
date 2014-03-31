@@ -21,7 +21,7 @@
                         </button>
                     </div>
                     <div class="col-xs-6">
-                        <button type="button" class="btn btn-lg btn-block" ng-click="submitRide()"><b>submit ride</b>
+                        <button type="button" class="btn btn-lg btn-block" ng-click="goToSubmitRide()"><b>submit ride</b>
                         </button>
                     </div>
                 </div>
@@ -34,11 +34,11 @@
     <div class="block block-form" ng-repeat="item in list">
         <div class="row">
             <div class="col-xs-1">From:</div>
-            <div class="col-xs-11">{{item.from.formatted_address}}</div>
+            <div class="col-xs-11">{{item.from.address}}</div>
         </div>
         <div class="row">
             <div class="col-xs-1">To:</div>
-            <div class="col-xs-11">{{item.to.formatted_address}}</div>
+            <div class="col-xs-11">{{item.to.address}}</div>
         </div>
 
     </div>
