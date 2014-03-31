@@ -10,7 +10,8 @@ var corpApp = angular.module('corpApp', [
   'corpApp.linkedin', 
   'corpApp.authorize', 
   'corpApp.test', 
-  'corpApp.escape'
+  'corpApp.escape',
+  'corpApp.AdvantageYou'
 ]);
 
 /** Constantes */
@@ -74,7 +75,8 @@ corpApp.controller('HomeController', function($scope, $http, $location, $timeout
     "linkedin",
     "authorize",
     "escape",
-    "test"
+    "test",
+    "AdvantageYou"
   ];
 
 });
