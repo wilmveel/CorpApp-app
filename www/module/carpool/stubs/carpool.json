@@ -6,22 +6,15 @@
         "_class": "nl.capgemini.corpapp.documents.Carpool",
         "corpkey": "WVEELENT",
         "from": {
-            "formatted_address": "Reykjavikplein 1, Utrecht, Netherlands",
-            "geometry": {
-                "location": {
-                    "d": 52.100135,
-                    "e": 5.064350999999988
-                }
-            }
+            "address": "Reykjavikplein 1, Utrecht, Netherlands",
+            "latitude": 52.100135,
+            "longitude": 5.064350999999988
+
         },
         "to": {
-            "formatted_address": "Hoogoorddreef 15, Amsterdam Zuidoost, Nederland",
-            "geometry": {
-                "location": {
-                    "d": 52.308226,
-                    "e": 4.944984999999974
-                }
-            }
+            "address": "Hoogoorddreef 15, Amsterdam Zuidoost, Nederland",
+            "latitude": 52.308226,
+            "longitude": 4.944984999999974
         },
         "date": {
             "sec": 1394089631,
@@ -35,22 +28,15 @@
         "_class": "nl.capgemini.corpapp.documents.Carpool",
         "corpkey": "BALTENA",
         "from": {
-            "formatted_address": "Haarlemmerweg, 1055 Amsterdam, Nederland",
-            "geometry": {
-                "location": {
-                    "k": 52.3848374,
-                    "A": 4.851391799999988
-                }
-            }
+            "address": "Haarlemmerweg, 1055 Amsterdam, Nederland",
+            "latitude": 52.3848374,
+            "longitude": 4.851391799999988
+
         },
         "to": {
-            "formatted_address": "Reykjavikplein 1, Utrecht, Netherlands",
-            "geometry": {
-                "location": {
-                    "d": 52.100135,
-                    "e": 5.064350999999988
-                }
-            }
+            "address": "Reykjavikplein 1, Utrecht, Netherlands",
+            "latitude": 52.100135,
+            "longitude": 5.064350999999988
         },
         "date": {
             "sec": 1394089631,
@@ -70,22 +56,14 @@
             "$id": "5318e1fc095e0d741d000032"
         },
         "from": {
-            "formatted_address": "Den Haag, Nederland",
-            "geometry": {
-                "location": {
-                    "k": 52.0704978,
-                    "A": 4.3006999000000405
-                }
-            }
+            "address": "Den Haag, Nederland",
+            "latitude": 52.0704978,
+            "longitude": 4.3006999000000405
         },
         "to": {
-            "formatted_address": "Gouda, Nederland",
-            "geometry": {
-                "location": {
-                    "k": 52.0115205,
-                    "A": 4.710463300000015
-                }
-            }
+            "address": "Gouda, Nederland",
+            "latitude": 52.0115205,
+            "longitude": 4.710463300000015
         },
         "corpkey": "BALTENA"
     }
