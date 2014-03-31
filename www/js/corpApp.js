@@ -1,4 +1,4 @@
-var corpApp = angular.module('corpApp', ['ui.bootstrap','ngRoute', 'corpApp.PeopleFinder', 'corpApp.departments', 'corpApp.presentation', 'corpApp.profile', 'corpApp.expenses', 'corpApp.coach', 'corpApp.carpool', 'corpApp.linkedin','ngAutocomplete']);
+var corpApp = angular.module('corpApp', ['ui.bootstrap','ngRoute', 'corpApp.PeopleFinder', 'corpApp.departments', 'corpApp.presentation', 'corpApp.profile', 'corpApp.expenses', 'corpApp.coach', 'corpApp.carpool', 'corpApp.linkedin','corpApp.AdvantageYou', 'ngAutocomplete']);
 
 corpApp.constant('config',{
 	'API_URL' : 'http://turfje.nl/corpapp',
@@ -73,7 +73,7 @@ corpApp.controller('HomeController', function($scope, $http, $location, Loginser
 		return color[i % 4];
 	};
 
-	$scope.modules = ["PeopleFinder", "expenses", "coach", "departments", "presentation","carpool", "linkedin"];
+	$scope.modules = ["PeopleFinder", "expenses", "coach", "departments", "presentation","carpool", "linkedin","AdvantageYou";
 	
 	$http.get(config.API_URL + '/servicePeople?corpkey=' + Loginservice.username).
 	success(function(data, status, headers, config) {
