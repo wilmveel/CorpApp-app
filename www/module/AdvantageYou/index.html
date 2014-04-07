@@ -1,0 +1,39 @@
+<div class="advantageyou">
+    <div class="row mmargin">
+        <div class="col-xs-12 block block-title block-title-coaching">AdvantageYou
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="input-group">
+                <input id="trainingSearch" type="text" class="form-control" placeholder="Search" ng-model="trainingSearch">
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div id="filterOptions" class="block-color1">
+                <div id="filterOptionsWrapper">
+                	<span class="option-wrapper" ng-repeat="location in locations">
+                	    <input id="location_{{location.name}}" type="checkbox" ng-model='location.selected'>
+                        <label for="location_{{location.name}}">{{location.name}}</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="training in list |  filter:trainingSearch | locationFilter:locations | orderBy:'-date'">
+            <a href="#/module/AdvantageYou/{{training.id}}">
+    	        <div class="training-square">
+    	            <img src="http://www.familieslager.nl/capathon/lion2.jpg" alt="">
+    	            <div class="training-square-wrapper">
+    	                <div class="training-square-summary selectable">
+    	                    <div class="training-name">{{training.name}}</div>
+    	                    <span class="training-date">{{training.date}}</span>
+    	                    <span class="training-location"><span class="responsive-hide">Locatie: </span>{{training.location}}</span>
+    	                </div>
+    	            </div>
+    	        </div>
+            </a>
+        </div>
+    </div>
+</div>

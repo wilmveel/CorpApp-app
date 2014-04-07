@@ -5,9 +5,13 @@ advantageyouModule.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/module/AdvantageYou', {
-            templateUrl: 'module/AdvantageYou/overview.html',
+            templateUrl: 'module/AdvantageYou/index.html',
             controller: 'AdvantageYouController'
-        });
+        }).
+        when('/module/AdvantageYou/:trainingId', {
+            templateUrl: 'module/AdvantageYou/training.html',
+            controller: 'AdvantageYouController'
+        })
     }
 ]);
 
