@@ -1,0 +1,97 @@
+.input-group{
+	width: 100%;
+}
+#trainingSearch{
+	line-height: 1.33em;
+	display: table-cell;
+	height:46px;
+	width: 100%;
+	height: 46px;
+	padding: 10px 16px;
+	font-size: 18px;
+}
+#filterOptionsWrapper{
+	line-height: 1.33em;
+	padding-left: 15px;
+}
+#filterOptions{
+	width: 100%;
+	height: 46px;
+}
+.option-wrapper{
+	padding-right: 20px;
+	color: white;
+}
+.option-wrapper label{
+    line-height: 46px;
+    display:inline-block;
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    font-size: 15px;
+}
+.option-wrapper input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 15px;
+    line-height: 46px;
+    display:inline-block; 
+    *display: inline;     /* for IE7*/
+    zoom:1;              /* for IE7*/
+    vertical-align:middle;
+}
+.training-square{
+	width: 100%;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.training-square>img{
+	width: 100%;
+	height: auto;
+}
+.training-square-summary{
+	margin-top: -5em;
+	width: 100%;
+	height: 5em;
+	position: relative;
+	background-color: white;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+  	overflow: hidden;
+  	padding: 0.5em;
+  	border: 1px solid #E7E7E7;
+}
+.training-name{
+	text-overflow:ellipsis;
+	font-size: 1.5em;
+}
+.training-date,.training-location{
+	font-size: 1em;
+	color:#858585;
+}
+.training-location{
+	float:right;
+}
+.mmargin{
+	margin-bottom: 15px;
+}
+.mmargin-top{
+	margin-top: 15px;
+}
+
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.selectable div,.selectable span{
+    -webkit-user-select: text!important;
+    -khtml-user-select: text!important;
+    -moz-user-select: text!important;
+    -o-user-select: text!important;
+    user-select: text!important;
+}

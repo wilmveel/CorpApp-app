@@ -1,0 +1,62 @@
+[
+	{
+		"name" : "Scrum Kickstart",
+		"date" : "29-04-2014",
+		"location" : "Utrecht",
+		"teacher" : "Wimpie Bosboom"
+	},
+	{
+		"name" : "Angular Foundation",
+		"date" : "16-04-2014",
+		"location" : "Amsterdam",
+		"teacher" : "Sophie Cartier"
+		},
+	{
+		"name" : "Forex Foundation",
+		"date" : "01-04-2014",
+		"location" : "Heerlen",
+		"teacher" : "Carlos Slim"
+		},
+	{
+		"name" : "Mobile Payments",
+		"date" : "03-05-2014",
+		"location" : "Utrecht",
+		"teacher" : "Matt Cutts"
+		},
+	{
+		"name" : "Agile getting acquainted",
+		"date" : "16-04-2014",
+		"location" : "Amsterdam",
+		"teacher" : "Robert Walker"
+		},
+	{
+		"name" : "Agile Project Management",
+		"date" : "01-04-2014",
+		"location" : "Utrecht",
+		"teacher" : "Ricard Farmer"
+		},
+	{
+		"name" : "Awareness DUET",
+		"date" : "03-05-2014",
+		"location" : "Utrecht",
+		"teacher" : "Wendell Frank"
+		},
+	{
+		"name" : "ArchiMate Overview",
+		"date" : "16-04-2014",
+		"location" : "Amsterdam",
+		"teacher" : "Florence Klein"
+		},
+	{
+		"name" : "CORA Explained",
+		"date" : "01-04-2014",
+		"location" : "Amsterdam",
+		"teacher" : "Roberta Abbott"
+		},
+	{
+		"name" : "e-Invoicing",
+		"date" : "03-05-2014",
+		"location" : "Utrecht",
+		"teacher" : "Matt Cutts"
+	}
+]
