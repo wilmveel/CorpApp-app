@@ -146,7 +146,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 		$scope.accessToken = authorizeService.getToken();
 		$scope.corpKey = authorizeService.getCorpKey();
 		$scope.userName = authorizeService.getUserName();
-		$scope.authorized = true;
+		$scope.authorized = authorizeService.hasToken();
 	},function(){
 		$location.path("/");
 	});
