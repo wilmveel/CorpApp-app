@@ -27,12 +27,8 @@ linkedinModule.controller('IndexLinkedinController', function($scope, $log, $htt
 	var redirectUrl = config.API_URL + "/rest/linkedin/connect";
 	var state = "123456789";
 
-	$scope.test = function() {
-		$log.debug("Test1");
-	}
-
 	// Open popup to connect to linkedin
-	$scope.linkedin = function() {
+	$scope.connect = function() {
 
 
 		$log.debug("Call linkedin");
