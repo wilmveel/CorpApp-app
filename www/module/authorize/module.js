@@ -141,10 +141,16 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 	
 	$log.debug("authorizeController");
 
-	$scope.accessToken = authorizeService.getToken();
-	$scope.corpKey = authorizeService.getCorpKey();
-	$scope.userName = authorizeService.getUserName();
-	$scope.authorized = authorizeService.hasToken();
+	authorizeService.validateToken()
+	.then(function(){
+		$scope.accessToken = authorizeService.getToken();
+		$scope.corpKey = authorizeService.getCorpKey();
+		$scope.userName = authorizeService.getUserName();
+		$scope.authorized = authorizeService.hasToken();
+	},function(){
+		$location.path("/");
+	});
+	
 
 	var windowRef;
 	
@@ -191,7 +197,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 
                 $location.path("/");
 				$scope.$apply();
-				
+
                 windowRef.close();
             }else if (/access_token=/.test(url)){
                 //login unsuccessful
