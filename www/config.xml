@@ -55,5 +55,5 @@
     <access origin="http://corpapp.herokuapp.com/*" />
     <access origin="https://corpapp.herokuapp.com/*" />
     <access origin="http://m.c.lnkd.licdn.com/*" />
-    <access origin="http://maps.googleapis.com/*" />
+    <access origin="https://maps.googleapis.com/*" />
 </widget>
