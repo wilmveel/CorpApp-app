@@ -15,6 +15,7 @@ authorizeModule.config(['$routeProvider',
 	}
 ]);
 
+// httpRequestInterceptor
 authorizeModule.factory('httpRequestInterceptor', function () {
   return {
     request: function (config) {
@@ -187,7 +188,10 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 var code = url.match(/code=([^\&]+)/)
                 if (code) code = code[1];
                 $log.log("Request with code: " + code);
+
                 $location.path("/");
+				$scope.$apply();
+				
                 windowRef.close();
             }else if (/access_token=/.test(url)){
                 //login unsuccessful
@@ -195,7 +199,10 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 if (access_token) access_token = access_token[1];
 				$log.log("Set access_token" + access_token);
 				localStorage.setItem("access_token", access_token);
+
 				$location.path("/");
+				$scope.$apply();
+
                 windowRef.close();
             }else if (/error_description=/.test(url)){
                 //login unsuccessful
