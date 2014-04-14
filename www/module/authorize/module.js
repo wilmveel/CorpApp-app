@@ -146,7 +146,7 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 		$scope.accessToken = authorizeService.getToken();
 		$scope.corpKey = authorizeService.getCorpKey();
 		$scope.userName = authorizeService.getUserName();
-		$scope.authorized = authorizeService.hasToken();
+		$scope.authorized = true;
 	},function(){
 		$location.path("/");
 	});
@@ -161,12 +161,6 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 		var redirectUrl = "http://localhost";
 	}else{
 		var redirectUrl = $location.absUrl();
-	}
-
-	$scope.setToken = function(){
-		$log.debug("Set token: ", $scope.token);
-		localStorage.setItem("access_token", $scope.token);
-		$location.path("/");
 	}
 	
 	// Open popup to connect to capgemini
