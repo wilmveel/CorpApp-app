@@ -15,6 +15,7 @@
         <link rel="stylesheet" type="text/css" href="module/expenses/css/module.css" />
 		<link rel="stylesheet" type="text/css" href="module/escape/css/escape.css" />
 		<link rel="stylesheet" type="text/css" href="module/AdvantageYou/css/module.css" />
+		<link rel="stylesheet" type="text/css" href="css/svg.css" />
 		
         <title>CorpApp</title>
 		
@@ -24,7 +25,9 @@
         <div class="navbar navbar-fixed-top">
 			<div class="container header" ng-controller="mainCtrl">
 				<div class="row row-medium	">
-					<div class="col-xs-3 col-ys-2 col-sm-2 col-md-1 block logo" ng-click="changeTheme()"></div>
+					<div class="col-xs-3 col-ys-2 col-sm-2 col-md-1 block logo" ng-click="goHome()">
+						<i ng-include="'img/svg/cap-logo.svg'"></i>
+					</div>
 					<div class="col-xs-9 col-ys-10  col-sm-10 col-md-11 block block-color2 date">
 						<span class="day">Zaterdag</span>
 						<span class="day">25 januari</span>

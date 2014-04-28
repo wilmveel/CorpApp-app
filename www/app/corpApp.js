@@ -82,7 +82,7 @@ corpApp.controller('HomeController', function($scope, $http, $location, $timeout
 });
 
 /** Main controller for look and feel */
-corpApp.controller('mainCtrl', function($scope) {
+corpApp.controller('mainCtrl', function($scope, $location) {
   $scope.changeTheme = function() {
     var linkEls = document.querySelectorAll('link.theme');
     var sheetIndex = 0;
@@ -95,4 +95,8 @@ corpApp.controller('mainCtrl', function($scope) {
     linkEls[(sheetIndex + 1) % linkEls.length].disabled = false;
     sessionStorage['theme'] = linkEls[(sheetIndex + 1) % linkEls.length].href;
   };
+
+  $scope.goHome = function() {
+    $location.path("/");
+  }
 });

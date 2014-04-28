@@ -14,9 +14,10 @@
 	background-color: #0b7391; /* dark orange */
 }
 .header .logo {
-	background-image: url("../img/logo.png");
+	/*background-image: url("../img/logo.png");*/
 	background-color:#1898CE;
 }
+
 .search .btn{
 	background-color: #1898CE;	
 }
