@@ -15,6 +15,7 @@ authorizeModule.config(['$routeProvider',
 	}
 ]);
 
+// httpRequestInterceptor
 authorizeModule.factory('httpRequestInterceptor', function () {
   return {
     request: function (config) {
@@ -99,10 +100,10 @@ authorizeModule.service('authorizeService', function($log, $http, $q, config) {
 	this.validateToken = function(){
 		$log.debug("validateToken");
 		return this.getUser().then(function(response) {
-
 			corpKey = response.data.username.toUpperCase();
 			userName = response.data.username;
 			email = response.data.email;
+			accessToken = localStorage.getItem("access_token");
 			return response;
 		},function(response) {
 			$log.debug("Cannot validate!");
@@ -140,10 +141,16 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 	
 	$log.debug("authorizeController");
 
-	$scope.accessToken = authorizeService.getToken();
-	$scope.corpKey = authorizeService.getCorpKey();
-	$scope.userName = authorizeService.getUserName();
-	$scope.authorized = authorizeService.hasToken();
+	authorizeService.validateToken()
+	.then(function(){
+		$scope.accessToken = authorizeService.getToken();
+		$scope.corpKey = authorizeService.getCorpKey();
+		$scope.userName = authorizeService.getUserName();
+		$scope.authorized = authorizeService.hasToken();
+	},function(){
+		$location.path("/");
+	});
+	
 
 	var windowRef;
 	
@@ -154,12 +161,6 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
 		var redirectUrl = "http://localhost";
 	}else{
 		var redirectUrl = $location.absUrl();
-	}
-
-	$scope.setToken = function(){
-		$log.debug("Set token: ", $scope.token);
-		localStorage.setItem("access_token", $scope.token);
-		$location.path("/");
 	}
 	
 	// Open popup to connect to capgemini
@@ -187,7 +188,10 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 var code = url.match(/code=([^\&]+)/)
                 if (code) code = code[1];
                 $log.log("Request with code: " + code);
+
                 $location.path("/");
+				$scope.$apply();
+
                 windowRef.close();
             }else if (/access_token=/.test(url)){
                 //login unsuccessful
@@ -195,7 +199,10 @@ authorizeModule.controller('authorizeController', function($scope, $http, $log, 
                 if (access_token) access_token = access_token[1];
 				$log.log("Set access_token" + access_token);
 				localStorage.setItem("access_token", access_token);
+
 				$location.path("/");
+				$scope.$apply();
+
                 windowRef.close();
             }else if (/error_description=/.test(url)){
                 //login unsuccessful
