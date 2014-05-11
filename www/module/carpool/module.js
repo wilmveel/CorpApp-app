@@ -67,24 +67,31 @@ carpoolModule.controller('IndexCarpoolController', function($scope, $http, $filt
             date : 123,
             from :{
                 address: $scope.details.formatted_address,
-                latitude: $scope.details.geometry.location[0],
-                longitude: $scope.details.geometry.location[1]
-
+                position: [
+                    $scope.details.geometry.location[0],
+                    $scope.details.geometry.location[1]
+                ]
             },
             to : {
                 address: $scope.details1.formatted_address,
-                latitude: $scope.details1.geometry.location[0],
-                longitude: $scope.details1.geometry.location[1]
+                position: [
+                    $scope.details1.geometry.location[0],
+                    $scope.details1.geometry.location[1]
+                ]
             }
         };
-
 
         $http.post(config.API_URL + '/rest/carpool', data).
             success(function(data, status, headers, config) {
             $log.debug("Success:",data);
+            $scope.messages = 'Your ride has been submitted successfully!';
+            $scope.details = '';
+            $scope.details1 = '';
         }).
             error(function(data, status, headers, config) {
                 $log.debug("Error:",data);
+                $scope.messages = 'Oops, we received your request, but there was an error.';
+                $log.error(data);
             });
 
     };
