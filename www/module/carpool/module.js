@@ -11,6 +11,10 @@ carpoolModule.config(['$routeProvider',
         when('/module/carpool/newride', {
             templateUrl: 'module/carpool/newride.html',
             controller: 'IndexCarpoolController'
+        }).
+        when('/module/carpool/details', {
+                templateUrl: 'module/carpool/details.html',
+                controller: 'IndexCarpoolController'
         })
     }
 ]);
@@ -54,13 +58,9 @@ carpoolModule.controller('IndexCarpoolController', function($scope, $http, $filt
         window.location.href = "#/module/carpool/newride";
         //alert("From: "+$scope.fromLocation+"<br />To:"+$scope.toLocation);
 	};
-
-	$scope.goSimple = function(){
-		window.location.href = "#/module/carpool";
-	};
-	$scope.goAdvanced = function(){
-		window.location.href = "#/module/carpool/advanced";
-	};
+    $scope.goToRideDetails = function(){
+        window.location.href = "#/module/carpool/details";
+    };
     $scope.submitRide = function(){
 
         var data = {
